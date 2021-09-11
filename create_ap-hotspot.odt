@@ -1,0 +1,10 @@
+﻿Share wifi without disconnecting from the actual wifi (source of internet)
+
+1-sudo apt install bash util-linux procps hostapd iproute2 iw wireless-tools haveged iptables dnsmasq git
+2-git clone https://github.com/oblique/create_ap.git
+3-cd create_ap/
+4-sudo make install
+5-(sudo create_ap <connected interface> <repeater interface> <essid repeated network> <WPA Key>)
+   sudo create_ap wlp2s0 wlp2s0 Bathroom_WiFi mysecuresecretkey
+cmd: iwconfig-see your wifi interface and write instead of "wlp2s0"
+
