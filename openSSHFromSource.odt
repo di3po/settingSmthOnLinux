@@ -1,0 +1,13 @@
+﻿download desired version from:https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/
+wget -c https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.Xp1.tar.gz
+tar -xzf openssh-8.Xp1.tar.gz
+cd openssh-8.Xp1/
+sudo apt install libpam0g-dev libselinux1-dev 	
+./configure --with-md5-passwords --with-pam --with-selinux --with-privsep-path=/var/lib/sshd/ --sysconfdir=/etc/ssh 
+make
+sudo make install
+in another tab: ssh -V
+
+source: https://www.tecmint.com/install-openssh-server-from-source-in-linux/
+
+
